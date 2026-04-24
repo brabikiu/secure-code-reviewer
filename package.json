@@ -1,0 +1,41 @@
+{
+  "name": "secure-code-reviewer",
+  "displayName": "Secure Code Reviewer",
+  "description": "Analiza calidad y seguridad de código JS/TS en VS Code",
+  "version": "0.0.1",
+  "publisher": "tu-nombre",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Linters",
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onCommand:secureCodeReviewer.scanFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "secureCodeReviewer.scanFile",
+        "title": "Secure Code Reviewer: Analizar archivo actual"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.8.0",
+    "vsce": "^2.15.0"
+  }
+}
