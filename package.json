@@ -14,8 +14,7 @@
   ],
   "activationEvents": [
     "onLanguage:javascript",
-    "onLanguage:typescript",
-    "onCommand:secureCodeReviewer.scanFile"
+    "onLanguage:typescript"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -35,7 +34,7 @@
   "devDependencies": {
     "@types/node": "^22.10.0",
     "@types/vscode": "^1.90.0",
-    "typescript": "^5.8.0",
+    "typescript": "^5.9.3",
     "vsce": "^2.15.0"
   }
 }
